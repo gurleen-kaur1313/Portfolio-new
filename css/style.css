@@ -54,6 +54,7 @@ img{
 }
 .header .logo{
     padding: 0 15px;
+    transform: translateX(-400px);
 }
 .header .logo a{
     font-size: 34px;
@@ -104,6 +105,8 @@ img{
   }
   .nav ul li a:hover:after {
     -webkit-animation: circle 1.5s ease-in forwards;
+    border-style: solid;
+    border-color: black;
   }
   
 
@@ -289,3 +292,44 @@ img{
       float: right;
       margin-right: 175px;
   }
+
+  /* social icons */
+
+  .pop [class*="fa fa-"] {
+    
+    background-color: #333;
+    border-radius: 70px;
+    color: #fff;
+    display: inline-block;
+    height: 70px;
+    line-height: 70px;
+    margin: auto 3px;
+    width: 70px;
+    font-size: 36px;
+    text-align: center;
+    position: relative;
+    top: 200px;
+    left: 175px;
+
+}
+
+.pop [class*="fa fa-github"]:hover {
+    background-color: #f98b88;
+   border-radius: 70px;
+    font-size: 36px;
+}
+.pop [class*="fa fa-instagram"]:hover {
+     background-color: #f98b88;
+     border-radius: 70px;
+    font-size: 36px;
+}
+.pop [class*="fa fa-linkedin"]:hover {
+    background-color: #f98b88;
+     border-radius: 70px;
+    font-size: 36px;
+}
+.pop [class*="fa fa-code"]:hover {
+    background-color: #f98b88;
+     border-radius: 70px;
+    font-size: 36px;
+}
