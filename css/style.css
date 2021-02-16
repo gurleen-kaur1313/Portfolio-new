@@ -364,7 +364,9 @@ img{
     font-family: 'Dancing Script', cursive;
     font-size: 50px;
 }
-
+.about h4{
+    margin-bottom: 30px;
+}
 
 .inner-section:before{
     position: absolute;
@@ -373,13 +375,13 @@ img{
     height: 0px;
     left: 0;
     bottom: 0;
-    border: 3px solid transparant;
+    border: 6px solid transparant;
     box-sizing: border-box;
   }
   .inner-section:hover:before{
     width: calc(850px / 2);
     height: 700px;
-    border: 3px solid #111;
+    border: 6px solid #111;
     border-right: none;
     border-bottom: none;
     transition: height 0.3s linear, 
@@ -392,13 +394,13 @@ img{
     height: 0px;
     top: 0;
     right: 0;
-    border: 3px solid transparant;
+    border: 6px solid transparant;
     box-sizing: border-box;
   }
   .inner-section:hover:after{
     width: calc(850px / 2);
     height: 700px;
-    border: 3px solid #111;
+    border: 6px solid #111;
     border-left: none;
     border-top: none;
     transition: height 0.3s linear, 
@@ -450,4 +452,92 @@ img{
       transform: translateY(-15px);
     }
   }
-  
+   /*Skills + Education*/
+
+   @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+.education {
+    height:900px;
+    width: 100%;
+    background: #ee9486;
+    font-family: Open Sans;
+    font-size: 50px;
+  	color: #222;
+}
+
+.education label {
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    display: block;
+    width: 600px;
+    height: 700px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.education .card {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: all 600ms;
+    transition: all 600ms;
+    z-index: 20;
+}
+
+    .card div {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: #FFF;
+        text-align: center;
+        line-height: 50px;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        border-radius: 2px;
+    }
+
+    .front h2{
+        margin-bottom: 30px;
+        margin-top: 20px;
+        text-underline-position: below;
+    }
+    .front li{
+        margin-bottom: 20px;
+    }
+
+    .card .back {
+        background: #222;
+        color: #FFF;
+        -webkit-transform: rotateX(180deg);
+        transform: rotateX(180deg);
+    }
+
+.education label:hover .card {
+    -webkit-transform: rotateX(20deg);
+    transform: rotateX(20deg);
+    box-shadow: 0 20px 20px rgba(50,50,50,.2);
+}
+
+input {
+    display: none;
+}
+
+:checked + .card {
+    transform: rotateX(180deg);
+    -webkit-transform: rotateX(180deg);
+}
+
+label:hover :checked + .card {
+    transform: rotateX(160deg);
+    -webkit-transform: rotateX(160deg);
+    box-shadow: 0 20px 20px rgba(255,255,255,.2);
+}
+   
